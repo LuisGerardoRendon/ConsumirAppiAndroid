@@ -1,8 +1,9 @@
 name: Android Build
 
 on: 
-  pull_request: 
-  
+  pull_request:
+    branches: [ ne/test ]
+  push: 
     branches: [ ne/test ]
   workflow_dispatch:
 
