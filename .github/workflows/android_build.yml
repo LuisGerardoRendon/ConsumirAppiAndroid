@@ -29,7 +29,7 @@ jobs:
 
       - name: Upload html test report
         uses: actions/upload-artifact@v2
-          whith:
+          with:
             name: lint_html_report
             path: app/build/reports/lint-results-debug.html
 
