@@ -1,6 +1,14 @@
 name: Android Build
 
-on: pull_request
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+  workflow_dispatch:
+
+
 
 jobs:
   build:
@@ -12,6 +20,9 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
+
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
 
       - name: Run-Lint
       - run: ./gradlew lint
